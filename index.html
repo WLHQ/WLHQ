@@ -148,6 +148,7 @@
         }
 
         /* Style for the button container */
+        /* Add margin to create spacing between image buttons */
         .image-button {
             background-color: #0037ff;
             border: none;
@@ -156,7 +157,7 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            margin-right: 10px;
+            margin: 20px; /* Adjust this value to control the spacing */
             cursor: pointer;
             border-radius: 12px;
             transition: background-color 0.3s, transform 0.3s;
@@ -235,28 +236,29 @@
         <p>Navigation Tools:</p>
         <button class="button" onclick="location.reload()">Reload this page</button>
         <button class="button" onclick="window.close()">Close This Page</button>
+        <!-- Inside the <div class="centered-text"> section -->
         <p>My Social Medias:</p>
         <div class="button">
-            <button class="image-button">
-                <a href="https://youtube.com/@WLHQ"><img src="img/YouTube-Logo.svg" alt="YouTube Logo"></a>
+            <a href="https://youtube.com/@WLHQ" class="image-button">
+                <img src="img/YouTube-Logo.svg" alt="YouTube Logo">
                 <span>WLHQ's YouTube Channel</span>
-            </button>
-            <button class="image-button">
-                <a href="https://instagram.com/WLHQYT"><img src="img/Instagram-Logo.svg" alt="Instagram Logo"></a>
+            </a>
+            <a href="https://instagram.com/WLHQYT" class="image-button">
+                <img src="img/Instagram-Logo.svg" alt="Instagram Logo">
                 <span>WLHQ's Instagram</span>
-            </button>
-            <button class="image-button">
-                <a href="https://twitter.com/@WLHQYT"><img src="img/Twitter-Logo.svg" alt="Twitter Logo"></a>
+            </a>
+            <a href="https://twitter.com/@WLHQYT" class="image-button">
+                <img src="img/Twitter-Logo.svg" alt="Twitter Logo">
                 <span>WLHQ's Twitter</span>
-            </button>
-            <button class="image-button">
-                <a href="https://twitch.tv/WLHQYT"><img src="img/Twitch-Logo.svg" alt="Twitch Logo"></a>
+            </a>
+            <a href="https://twitch.tv/WLHQYT" class="image-button">
+                <img src="img/Twitch-Logo.svg" alt="Twitch Logo">
                 <span>WLHQ's Twitch</span>
-            </button>
-            <button class="image-button">
-                <a href="https://github.com/WLHQ"><img src="img/GitHub-Logo.svg" alt="GitHub Logo"></a>
+            </a>
+            <a href="https://github.com/WLHQ" class="image-button">
+                <img src="img/GitHub-Logo.svg" alt="GitHub Logo">
                 <span>WLHQ's GitHub</span>
-            </button>
+            </a>
         </div>
         <p>Games:</p>
         <a href="https://status.epicgames.com/"><button class="button">Epic Games Status</button></a>
@@ -268,10 +270,9 @@
         <p>Screensavers:</p>
         <a href="https://1j01.github.io/pipes/"><button class="button">Windows 3D Pipes Screensaver</button></a>
         <a href="https://dvdscreensaver.online/"><button class="button">DVD Screensaver</button></a>
-    </div>
-    <div class="footer">
-        <div id="wcb" class="carbonbadge wcb-d"></div>
-        <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+        <div class="footer">
+            <div id="wcb" class="carbonbadge wcb-d"></div>
+            <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
         <p>Hosted by GitHub.</p>
     </div>
 </body>
