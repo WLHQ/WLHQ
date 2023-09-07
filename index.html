@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WLHQ's Website</title>
+    <meta name="description" content="This is my website description.">
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin-top: 10px;
+        }
+
+        .centered-text {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        /* TV screen */
+        @media (min-width: 1200px) {
+            .centered-text {
+                font-size: 42px;
+            }
+            .button {
+                font-size: 38px;
+            }
+            .image-button span {
+            font-size: 38px;
+            }
+            /* Wrap the button in an anchor tag with the href attribute */
+            .button a {
+                text-decoration: none; /* Remove underline from the link */
+                color: white; /* Set link text color */
+                display: block; /* Make the link cover the entire button */
+                height: 100%; /* Make the link fill the button's height */
+                width: 100%; /* Make the link fill the button's width */
+            }
+        }
+
+        /* Computer screen */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .centered-text {
+                font-size: 32px;
+            }
+            .button {
+                font-size: 24px;
+            }
+            .image-button span {
+            font-size: 24px;
+            }
+        }
+
+        /* Tablet screen or larger cellphone */
+        @media (min-width: 600px) and (max-width: 991px) {
+            .centered-text {
+                font-size: 22px;
+            }
+            .button {
+                font-size: 18px;
+            }
+            .image-button span {
+            font-size: 18px;
+            }
+        }
+
+        /* Smaller cellphone */
+        @media (max-width: 599px) {
+            .centered-text {
+                font-size: 18px;
+            }
+            .button {
+                font-size: 16px;
+            }
+            .image-button span {
+            font-size: 16px;
+            }
+        }
+
+        button {
+            background-color: #0037ff;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 0, 0, 0.2);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: rgba(93, 114, 255, 0.848); /* Semi-white background on hover */
+            transform: scale(1.05); /* Slight scale-up on hover */
+            box-shadow: inset 0 0 0 2px rgb(255, 255, 255);
+            animation-name: fade;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fade {
+            0% {
+                box-shadow: inset 0 0 0 2px rgb(0, 225, 255);
+            }
+
+            50% {
+                box-shadow: inset 0 0 0 2px rgb(255, 255, 255);
+            }
+
+            100% {
+                box-shadow: inset 0 0 0 2px rgb(0, 225, 255);
+            }
+        }
+
+        /* Style for the button container */
+        .image-button {
+            background-color: #0037ff;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        /* Style for the image */
+        .image-button img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        /* Hover effect */
+        .image-button:hover {
+            background-color: rgba(93, 114, 255, 0.848);
+            transform: scale(1.05);
+            box-shadow: inset 0 0 0 2px rgb(255, 255, 255);
+            animation-name: fade;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fade {
+            0% {
+                box-shadow: inset 0 0 0 2px rgb(0, 225, 255);
+            }
+
+            50% {
+                box-shadow: inset 0 0 0 2px rgb(255, 255, 255);
+            }
+
+            100% {
+                box-shadow: inset 0 0 0 2px rgb(0, 225, 255);
+            }
+        }
+    </style>
+    <script>
+        // Function to update the current date and time
+        function updateDateTime() {
+            var dateElement = document.getElementById("date");
+            var timeElement = document.getElementById("time");
+
+            var currentDate = new Date();
+
+            // Format the date and time as desired
+            var date = currentDate.toDateString();
+            var time = currentDate.toLocaleTimeString();
+
+            // Update the HTML elements with the current date and time
+            dateElement.textContent = "Current Date: " + date;
+            timeElement.textContent = "Current Time: " + time;
+        }
+        // Call the resizeText function on page load and whenever the window is resized
+        window.addEventListener("load", function () {
+            updateDateTime();
+        });
+
+        // Update the date and time every second
+        setInterval(updateDateTime, 1000);
+    </script>
+</head>
+<body>
+    <div class="centered-text">
+        <h1>WLHQ's Website</h1>
+        <picture>
+            <!-- WebP image source -->
+            <source srcset="img/WLHQ-Splatoon3-1.webp" type="image/webp" alt="WLHQ" width="300" height="300">
+            <!-- Fallback image source (JPEG) -->
+            <img src="img/WLHQ-Splatoon3-1.png" alt="Image Alt Text" alt="WLHQ" width="300" height="300">
+        </picture>
+        <p>Welcome to my website! You can find my social medias & some other stuff below.</p>
+        <p id="date">Fetching Current Date...</p>
+        <p id="time">Fetching Current Time...</p>
+    </div>
+    <div class="centered-text">
+        <p>Navigation Tools:</p>
+        <button class="button" onclick="location.reload()">Reload this page</button>
+        <button class="button" onclick="window.close()">Close This Page</button>
+        <p>My Social Medias:</p>
+        <div class="button">
+            <button class="image-button">
+                <a href="https://youtube.com/@WLHQ"><img src="img/YouTube-Logo.svg" alt="YouTube Logo"></a>
+                <span>WLHQ's YouTube Channel</span>
+            </button>
+            <button class="image-button">
+                <a href="https://instagram.com/WLHQYT"><img src="img/Instagram-Logo.svg" alt="Instagram Logo"></a>
+                <span>WLHQ's Instagram</span>
+            </button>
+            <button class="image-button">
+                <a href="https://twitter.com/@WLHQYT"><img src="img/Twitter-Logo.svg" alt="Twitter Logo"></a>
+                <span>WLHQ's Twitter</span>
+            </button>
+            <button class="image-button">
+                <a href="https://twitch.tv/WLHQYT"><img src="img/Twitch-Logo.svg" alt="Twitch Logo"></a>
+                <span>WLHQ's Twitch</span>
+            </button>
+            <button class="image-button">
+                <a href="https://github.com/WLHQ"><img src="img/GitHub-Logo.svg" alt="GitHub Logo"></a>
+                <span>WLHQ's GitHub</span>
+            </button>
+        </div>
+        <p>Games:</p>
+        <a href="https://status.epicgames.com/"><button class="button">Epic Games Status</button></a>
+        <p>Music:</p>
+        <a href="https://youtune.kvnp.eu/"><button class="button">YouTune - Home</button></a>
+        <a href="https://lofimusic.app/lofigirl"><button class="button">Lofi Music</button></a>
+        <p>Utilities:</p>
+        <a href="https://githubstat.us/"><button class="button">GitHub Status</button></a>
+        <p>Screensavers:</p>
+        <a href="https://1j01.github.io/pipes/"><button class="button">Windows 3D Pipes Screensaver</button></a>
+        <a href="https://dvdscreensaver.online/"><button class="button">DVD Screensaver</button></a>
+    </div>
+    <div class="footer">
+        <div id="wcb" class="carbonbadge wcb-d"></div>
+        <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+        <p>Hosted by GitHub.</p>
+    </div>
+</body>
+</html>
