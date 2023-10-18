@@ -3,8 +3,8 @@
     "name": "WLHQ's GitHub Website",
     "lang": "en",
     "description": "WLHQ's Website on GitHub.",
-    "id": "https://wlhq.github.io/WLHQ/",
-    "start_url": "https://wlhq.github.io/WLHQ/",
+    "id": "WLHQs-pwa",
+    "start_url": "/WLHQ/",
     "url_handlers": [
       {
         "origin": "https://wlhq.github.io/WLHQ/"
