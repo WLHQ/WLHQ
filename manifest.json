@@ -4,7 +4,7 @@
     "lang": "en",
     "description": "WLHQ's Website on GitHub.",
     "id": "https://wlhq.github.io/WLHQ/",
-    "start_url": "/WLHQ",
+    "start_url": "https://wlhq.github.io/WLHQ/",
     "url_handlers": [
       {
         "origin": "https://wlhq.github.io/WLHQ/"
