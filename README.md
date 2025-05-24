@@ -1,6 +1,7 @@
 - 👋 Hi, I’m @WLHQ
 - 🌱 I’m currently learning Python 3, GDScript, & Godot.
-- 📫 Reach out to me on social media! 
+- 📫 Reach out to me on social media!
+- Brought a highschool Godot 4 game called Racing Dash 2D back from the ashes.
 
 <!---
 WLHQ/WLHQ is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
